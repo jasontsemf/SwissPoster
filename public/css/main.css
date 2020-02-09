@@ -1,0 +1,32 @@
+.row{
+    display: flex;
+}
+.col{
+    flex: 1;
+    padding-bottom: 25%;
+    border: 2px solid pink;
+}
+.one{
+    width: 40%;
+    /* border: 2px solid pink; */
+    -webkit-flex-direction: column; 
+    flex-direction: column; 
+    float: left;
+}
+.two{
+    width: 60%;
+    padding-bottom: 60%;
+    border: 3px solid pink;
+}
+.three{
+    width: 100%;
+    height: 40%;
+    background-color: aqua;
+    /* border: 1px solid pink; */
+}
+.four{
+    width: 100%;
+    height: 60%;
+    background-color: rebeccapurple;
+    /* border: 1px solid pink; */
+}
