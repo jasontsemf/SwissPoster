@@ -1,14 +1,86 @@
+body{
+    background-color: whitesmoke;
+    min-width:400px;
+}
+.wrapper{
+    background: white;
+}
+.top{
+    width:100%;
+    height: 100%;
+}
+.bottom{
+    width:100%;
+    height:100%;
+}
 .row{
     display: flex;
+    height: 100%;
 }
 .col{
     flex: 1;
-    padding-bottom: 25%;
-    border: 2px solid pink;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    background-color: #494646;
+}
+.col-tri{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border-top: 24vw solid #20AABC;
+    border-right: 24vw solid transparent;
+}
+.col-nw{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #494646;
+    width: 100%;
+    height: 100%;
+    background: #E7567D;
+    border-radius: 100% 0 0 0;
+    -moz-border-radius: 100% 0 0 0;
+    -webkit-border-radius: 100% 0 0 0;
+}
+.col-ne{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #494646;
+    width: 100%;
+    height: 100%;
+    background: #E7567D;
+    border-radius: 0 100% 0 0;
+    -moz-border-radius: 0 100% 0 0;
+    -webkit-border-radius: 0 100% 0 0;
+}
+.col-se{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #494646;
+    width: 100%;
+    height: 100%;
+    background: #E7567D;
+    border-radius: 0 0 100% 0;
+    -moz-border-radius: 0 0 100% 0;
+    -webkit-border-radius: 0 0 100% 0;
+}
+.col-sw{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #494646;
+    width: 100%;
+    height: 100%;
+    background: #E7567D;
+    border-radius: 0 0 0 100%;
+    -moz-border-radius: 0 0 0 100%;
+    -webkit-border-radius: 0 0 0 100%;
 }
 .one{
     width: 40%;
-    /* border: 2px solid pink; */
     -webkit-flex-direction: column; 
     flex-direction: column; 
     float: left;
@@ -16,17 +88,42 @@
 .two{
     width: 60%;
     padding-bottom: 60%;
-    border: 3px solid pink;
+    /* background-color: pink; */
+    float: left;
+    /* border: 3px solid pink; */
+}
+.two p{
+    position: absolute;
+    margin: 0px;
+    padding-top: 2vw;
+    padding-right: 4vw;
+    font-size: 2vw;
+    line-height: 2vw;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
 }
 .three{
     width: 100%;
-    height: 40%;
-    background-color: aqua;
-    /* border: 1px solid pink; */
+    padding-bottom: 50%;
+}
+.three p{
+    position: absolute;
+    margin: 0px;
+    padding-top: 2.5vw;
+    padding-left: 2vw;
+    font-size: 10vw;
+    line-height: 8vw;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 900;
 }
 .four{
     width: 100%;
-    height: 60%;
-    background-color: rebeccapurple;
-    /* border: 1px solid pink; */
+    /* padding-top: 100%; */
+}
+.four img{
+    padding-top: 10%;
+    padding-left: 10%;
+    width: 80%;
 }
