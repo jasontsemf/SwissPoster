@@ -96,9 +96,6 @@ Inspired by the spinning puzzle game, the complete circle, which is formed by 4 
 ```js
 let angle = [0,0,0,0];
 function rotate(i) {
-    console.log("click");
-    console.log("current angle: " + angle);
-    console.log(i);
     angle[i.id]++;
     var elem = document.getElementById(i.id);
     var it = setInterval(frame, 10);
@@ -115,7 +112,7 @@ function rotate(i) {
 
 ## Struggle
 
-Perhaps its caused by using `vh` and `vw`, sometimes there will be gaps between the triangles and the quarter pies, specifical if the window is being scaled down.
+Perhaps its caused by using `vh` and `vw`, sometimes there will be gaps between the triangles and the quarter pies, specifically when the window is being scaled down.
 
 ## Reference
 
