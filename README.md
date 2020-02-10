@@ -47,3 +47,86 @@ I started with the Macbook Pro screen resolution and scaled the height with the 
 And finally came up with the graphical design of the poster.
 
 ![graphical design](public/img/graphical.png)
+
+## Building the Website
+
+## HTML and CSS
+
+The entire HTML is built with flex boxes, essentially consisting several `row`s and `col`s. As shown, the `top` of the page is a 4 by 4 grid. And the `bottom` of the page is another portion of the golden ratio composition.
+
+![html grid](public/img/html_grid.png)
+
+Then the right angled triangles are being drawn with a scaled up `border` of two adjacent sides, then hide one side of the two to create the diagonal line.
+
+![triangle](public/img/triangle.png)
+
+```CSS
+.col-tri{
+    border-top: 24vw solid #20AABC;
+    border-right: 24vw solid transparent;
+}
+```
+
+Similarly to the concept applied for triangles, the quartie pies are created with `border-radius`.
+
+![circle](public/img/quarter.png)
+
+```CSS
+.col-nw{
+    background-color: #494646;
+    width: 100%;
+    height: 100%;
+    border-radius: 100% 0 0 0;
+    -moz-border-radius: 100% 0 0 0;
+    -webkit-border-radius: 100% 0 0 0;
+}
+```
+
+To finish up, the `p` and `img` are positioned in the grid with `position: absolute`.
+
+During the entire HTML development, I used `vh` and `vw`. So far this is the easiest way to achieve proportional shapes that are responsive to the window size.
+
+### Adding interactivity with JavaScript
+
+Inspired by the spinning puzzle game, the complete circle, which is formed by 4 quarter pies can be rotated clockwise, 90 degrees at a time to form different patterns. For example a flower.
+
+![flower](public/img/flower.png)
+![pattern](public/img/pattern.gif)
+
+```js
+let angle = [0,0,0,0];
+function rotate(i) {
+    console.log("click");
+    console.log("current angle: " + angle);
+    console.log(i);
+    angle[i.id]++;
+    var elem = document.getElementById(i.id);
+    var it = setInterval(frame, 10);
+    function frame() {
+        if ((angle[i.id]%90) == 0 && angle != 0) {
+            clearInterval(it);
+        } else {
+            angle[i.id]++;
+            elem.style.transform = "rotate(" + angle[i.id] + "deg)";
+        }
+    }
+}
+```
+
+## Struggle
+
+Perhaps its caused by using `vh` and `vw`, sometimes there will be gaps between the triangles and the quarter pies, specifical if the window is being scaled down.
+
+## Reference
+
+[CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
+
+[Flex Direction](https://css-tricks.com/almanac/properties/f/flex-direction/)
+
+[CSS Quarter Circles](http://jsfiddle.net/mitrosin/xb9edv64/)
+
+[Aspect Ratio Boxes](https://css-tricks.com/aspect-ratio-boxes/)
+
+[onclick Event](https://www.w3schools.com/jsref/event_onclick.asp)
+
+[CSS transform Property](https://www.w3schools.com/cssref/css3_pr_transform.asp)
