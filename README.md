@@ -2,7 +2,7 @@
 
 This is the week 2 assignemnt for the ITP class Dynamic Web Development.
 
-[Live Demo on Glitch](www.glitch.com)
+[Live Demo on Glitch](https://jasontsemf-swissposter.glitch.me/)
 
 ## Inspiration
 
